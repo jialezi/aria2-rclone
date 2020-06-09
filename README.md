@@ -104,6 +104,8 @@ docker logs aria2
 
 Caddyfile里面添加   proxy /jsonrpc  127.0.0.1:6800
 
+5.FileBrowser可以执行Linux命令代码，解锁unzip/wget等命令，需要手动添加 设置-用户管理—用户命令(Linux 代码)
+
 --------------------------------------
 感谢相关项目：
 

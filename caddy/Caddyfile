@@ -3,5 +3,8 @@
  timeouts none
  gzip
  tls off
- proxy  /file 127.0.0.1:8080
+ proxy  /file 127.0.0.1:8080 {
+   transparent
+   websocket
+ }
 }
