@@ -1,0 +1,7 @@
+:80 {
+ root /home/caddy/www/
+ timeouts none
+ gzip
+ tls off
+ proxy  /file 127.0.0.1:8080
+}
