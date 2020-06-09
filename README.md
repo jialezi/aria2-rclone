@@ -100,6 +100,9 @@ docker logs aria2
 
 3.进入docker容器的命令：docker exec -it aria2 sh（aria2是容器的名字，sh的cmd命令）
 
+4.如果只想使用一个端口（可能你使用内网穿透服务只有一个端口时），考虑反向代理aria2c 6800
+
+Caddyfile里面添加   proxy /jsonrpc  127.0.0.1:6800
 
 --------------------------------------
 感谢相关项目：
