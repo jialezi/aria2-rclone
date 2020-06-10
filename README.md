@@ -106,6 +106,18 @@ Caddyfile里面添加   proxy /jsonrpc  127.0.0.1:6800
 
 5.FileBrowser可以执行Linux命令代码，解锁unzip/wget等命令，需要手动添加 设置-用户管理—用户命令(Linux 代码)
 
+6.需要更新/更改软件、修改自己配置，构建自己镜像的，参考以下方法
+```
+#先克隆本仓库
+git clone https://github.com/jialezi/aria2-rclone
+#再进入aria2-rclone，更换自己需要的配置/软件
+cd aria2-rclone
+#本地构建docker镜像（-f为Dockerfile文件，-t为镜像名称，不要漏了那一点.）
+docker build -f Dockerfile . -t aria2
+#之后启动镜像（同上介绍）
+docker run -idt --name aria2 -p 80:80  -p 6800:6800 -v /home/aria2:/home/aria2 -e rpc=jaz  aria2
+```
+
 --------------------------------------
 感谢相关项目：
 
