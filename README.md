@@ -8,9 +8,9 @@ aria2下载后使用rclone自动上传到网盘的docker镜像
 使用的软件版本：
 
 - Aria2c 1.35.0 
-- Rclone 魔改支持世纪互联的gclone v1.51.10
+- Rclone 魔改支持世纪互联的gclone v1.52.13
 - Caddy 1.0.4
-- Filebrowser 2.1.2
+- Filebrowser 2.8.0
 - AriaNg 1.1.6
 
 -------------------------------------
@@ -29,6 +29,11 @@ AriaNg：80
 Aria2下载目录  /home/aria2
 
 Aria2配置目录 /root/.aria2
+
+#### caddy
+caddy配置文件  /home/caddy/Caddyfile
+
+网站目录  /home/caddy/www
 
 ##### Filebrowser
 Filebrowser默认用户名：admin
@@ -94,7 +99,7 @@ docker logs aria2
 -------------------------------------
 最后提醒几点：
 
-1.可以去https://sleele.gitee.io/aria2-trackers/ 获取tracker地址
+1.下载bt没速度的，可以试试添加tracker（AriaNG面板添加或配置文件/root/.aria2/aria2.conf添加），可以去https://sleele.gitee.io/aria2-trackers/ 获取tracker地址
 
 2.AriaNg里面下载失败、手动删除的任务文件在本地是不会自动删除的，需要手动去删除。（也可以配合aria2配置相关脚本执行，本配置没有设置）
 
@@ -127,6 +132,6 @@ https://github.com/q3aql/aria2-static-builds
 
 https://caddyserver.com
 
-https://filebrowser.xyz
+https://filebrowser.org
 
 http://ariang.mayswind.net/
