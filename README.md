@@ -8,9 +8,10 @@ aria2下载后使用rclone自动上传到网盘的docker镜像
 使用的软件版本：
 
 - Aria2c 1.35.0 
-- Rclone 魔改支持世纪互联的gclone v1.52.13
+- Rclone 官方v1.54.0（支持世纪互联）
+- ~~Rclone 魔改支持世纪互联的gclone v1.52.13~~
 - Caddy 1.0.4
-- Filebrowser 2.8.0
+- Filebrowser 2.11.0
 - AriaNg 1.1.6
 
 -------------------------------------
@@ -50,7 +51,7 @@ Filebrowser默认目录：/
 
 ```
 ##docker启动
-docker run -idt -p 80:80  -p 6800:6800 -v /home/aria2:/home/aria2 -e rpc=jaz --name aria2 jialezi/aria2
+docker run -idt -p 80:80  -p 6800:6800 -v /home/aria2:/home/aria2 -e rpc=jaz --restart=always --name aria2 jialezi/aria2
 
 ##再执行docker logs查看信息
 docker logs aria2
@@ -60,7 +61,7 @@ docker logs aria2
 
 **运行后浏览器打开http://ip，先设置Aria2的端口密码**
 
- ![image](https://i.imgur.com/gqd6JRF.jpg)
+ ![image](https://p.pstatp.com/origin/1376f0002ce22eb236bf8)
 
 --------------------------------------
 
@@ -70,15 +71,15 @@ docker logs aria2
 
 **点击文件管理，打开FileBrowser，默认admin:admin**
 
- ![image](https://i.imgur.com/UGhbfDH.jpg)
+ ![image](https://p.pstatp.com/origin/1388800025805be0f3d6f)
 
 --------------------------------------
 
- ![image](https://i.imgur.com/3Ac3nC9.jpg)
+ ![image](https://p.pstatp.com/origin/feff0003180f8a3621c8)
 
 --------------------------------------
 
- ![image](https://i.imgur.com/6nsepDT.jpg)
+ ![image](https://p.pstatp.com/origin/138d20000bc8489cf3a8d)
 
 
 --------------------------------------
@@ -120,13 +121,13 @@ cd aria2-rclone
 #本地构建docker镜像（-f为Dockerfile文件，-t为镜像名称，不要漏了那一点.）
 docker build -f Dockerfile . -t aria2
 #之后启动镜像（同上介绍）
-docker run -idt --name aria2 -p 80:80  -p 6800:6800 -v /home/aria2:/home/aria2 -e rpc=jaz  aria2
+docker run -idt --name aria2 -p 80:80  -p 6800:6800 -v /home/aria2:/home/aria2 -e rpc=jaz --restart=always aria2
 ```
 
 --------------------------------------
 感谢相关项目：
 
-https://github.com/jonntd/gclone
+https://rclone.org/
 
 https://github.com/q3aql/aria2-static-builds
 
