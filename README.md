@@ -8,7 +8,7 @@ aria2下载后使用rclone自动上传到网盘的docker镜像
 使用的软件版本：
 
 - Aria2c 1.35.0 
-- Rclone 官方v1.54.0（支持世纪互联）
+- Rclone 官方v1.54.0（支持世纪互联，如果用世纪互联需要重新配置一下）
 - ~~Rclone 魔改支持世纪互联的gclone v1.52.13~~
 - Caddy 1.0.4
 - Filebrowser 2.11.0
