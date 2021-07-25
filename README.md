@@ -1,7 +1,7 @@
 # aria2-rclone
-aria2下载后使用rclone自动上传到网盘的docker镜像(linux-amd64)
+aria2下载后使用rclone自动上传到网盘的docker镜像
 
-ARM64版本 jialezi/aria2:arm
+AMD64/ARM64
 
 -------------------------------------
 
