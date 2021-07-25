@@ -104,7 +104,7 @@ docker logs aria2
 
 2.AriaNg里面下载失败、手动删除的任务文件在本地是不会自动删除的，需要手动去删除。（也可以配合aria2配置相关脚本执行，本配置没有设置）
 
-3.进入docker容器的命令：docker exec -it aria2 sh（aria2是容器的名字，sh的cmd命令）
+3.进入docker容器的命令：docker exec -it aria2 sh（aria2是容器的名字，sh是cmd命令）
 
 4.如果只想使用一个端口（可能你使用内网穿透服务只有一个端口时），考虑反向代理aria2c 6800
 
@@ -112,7 +112,7 @@ Caddyfile里面添加   proxy /jsonrpc  127.0.0.1:6800
 
 5.FileBrowser可以执行Linux命令代码，解锁unzip/wget等命令，需要手动添加 设置-用户管理—用户命令(Linux 代码)
 
-6.需要更新/更改软件、修改自己配置，构建自己镜像的，参考以下方法
+6.需要更新/更改软件、修改自己配置，构建自己镜像的，参考以下方法（仓库内bin目录的软件均为linux-amd64版，其他系统请自行研究）
 ```
 #先克隆本仓库
 git clone https://github.com/jialezi/aria2-rclone
