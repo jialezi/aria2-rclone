@@ -1,6 +1,8 @@
 # aria2-rclone
 aria2下载后使用rclone自动上传到网盘的docker镜像(linux-amd64)
 
+ARM64版本 jialezi/aria2:arm
+
 -------------------------------------
 
 主要功能是Aria2下载+Rclone上传，Rclone上传默认没配置，具体设置方法看下面说明。
@@ -112,7 +114,7 @@ Caddyfile里面添加   proxy /jsonrpc  127.0.0.1:6800
 
 5.FileBrowser可以执行Linux命令代码，解锁unzip/wget等命令，需要手动添加 设置-用户管理—用户命令(Linux 代码)
 
-6.需要更新/更改软件、修改自己配置，构建自己镜像的，参考以下方法（仓库内bin目录的软件均为linux-amd64版，其他系统请自行研究）
+6.需要更新/更改软件、修改自己配置，构建自己镜像的，参考以下方法（仓库内bin目录的软件均为linux-amd64版，其他系统请自行下载相应版本替换）
 ```
 #先克隆本仓库
 git clone https://github.com/jialezi/aria2-rclone
@@ -127,12 +129,12 @@ docker run -idt --name aria2 -p 80:80  -p 6800:6800 -v /home/aria2:/home/aria2 -
 --------------------------------------
 感谢相关项目：
 
-https://rclone.org/
+https://rclone.org/ （https://rclone.org/downloads/）
 
-https://github.com/q3aql/aria2-static-builds
+https://github.com/q3aql/aria2-static-builds （https://github.com/q3aql/aria2-static-builds/releases）
 
-https://caddyserver.com
+https://caddyserver.com （https://github.com/caddyserver/caddy/releases/tag/v1.0.4）
 
-https://filebrowser.org
+https://filebrowser.org （https://github.com/filebrowser/filebrowser/releases）
 
-http://ariang.mayswind.net/
+http://ariang.mayswind.net/ 
